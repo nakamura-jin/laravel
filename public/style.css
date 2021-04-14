@@ -1,0 +1,96 @@
+body {
+  background: #2d197c;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  width: 50vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.todo__add {
+  width: 80%;
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.button__add {
+  padding: 8px 16px;
+  background: #fff;
+  border: 2px solid #dc70fa;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #dc70fa;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.button__add:hover {
+  background: #dc70fa;
+  color: #fff;
+  transition: .3s;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+}
+
+tr {
+  height: 50px;
+}
+
+.todo__text {
+  width: 90%;
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.button__update {
+  padding: 8px 16px;
+  background: #fff;
+  border: 2px solid #fa9770;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fa9770;
+}
+
+.button__update:hover {
+  background: #fa9770;
+  color: #fff;
+  transition: .3s;
+}
+
+.button__delete {
+  padding: 8px 16px;
+  background: #fff;
+  border: 2px solid #71fadc;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #71fadc;
+}
+
+.button__delete:hover {
+  background: #71fadc;
+  color: #fff;
+  transition: .3s;
+}
