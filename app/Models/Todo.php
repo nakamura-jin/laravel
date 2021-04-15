@@ -16,4 +16,9 @@ class Todo extends Model
         $txt = $this->content;
         return $txt;
     }
+
+    public function getId() {
+        $id = $this->id;
+        return $id;
+    }
 }

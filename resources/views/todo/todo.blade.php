@@ -20,7 +20,7 @@
       </form>
       @if (count($errors) > 0)
       <ul>
-        @foreach($errors as $error)
+        @foreach($errors->all() as $error)
         <li>{{$error}}</li>
         @endforeach
       </ul>
@@ -36,20 +36,19 @@
           </tr>
           @foreach ($items as $item)
           <tr>
-            <td>{{$item->created_at}}</td>
-            <td><input type="text" name="content" value="{{$item->getData()}}" class="todo__text"></td>
-            <td>
-              <form action="/todo/update" method="post">
-                @csrf
+            <form action="/todo/update/{{$item->id}}" method="post">
+              @csrf
+              <td>{{$item->created_at}}</td>
+              <td><input type="text" name="content" value="{{$item->getData()}}" class="todo__text"></td>
+              <td>
                 <!-- <input type="hidden" name="id"> -->
                 <button type="submit" class="button__update">更新</button>
-              </form>
-            </td>
+              </td>
+            </form>
             <td>
-              <form action="/todo/delete" method="post">
+              <form action="/todo/delete/{{$item->id}}" method="post">
                 @csrf
-                <!-- <input type="hidden" name="id" value="削除"> -->
-                <button type="submit" name="id" class="button__delete">削除</button>
+                <button class="button__delete" name="id">削除</button>
               </form>
             </td>
           </tr>
